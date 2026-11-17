@@ -1,0 +1,348 @@
+{
+  "type": "FeatureCollection",
+  "description": "九个虚构方块仅供开发，不表示真实地理边界",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "adcode": 350100,
+        "name": "福州演示区",
+        "center": [
+          117.4,
+          24.4
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              117,
+              24
+            ],
+            [
+              117.8,
+              24
+            ],
+            [
+              117.8,
+              24.8
+            ],
+            [
+              117,
+              24.8
+            ],
+            [
+              117,
+              24
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "adcode": 350200,
+        "name": "厦门演示区",
+        "center": [
+          118.4,
+          24.4
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              118,
+              24
+            ],
+            [
+              118.8,
+              24
+            ],
+            [
+              118.8,
+              24.8
+            ],
+            [
+              118,
+              24.8
+            ],
+            [
+              118,
+              24
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "adcode": 350300,
+        "name": "莆田演示区",
+        "center": [
+          119.4,
+          24.4
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              119,
+              24
+            ],
+            [
+              119.8,
+              24
+            ],
+            [
+              119.8,
+              24.8
+            ],
+            [
+              119,
+              24.8
+            ],
+            [
+              119,
+              24
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "adcode": 350400,
+        "name": "三明演示区",
+        "center": [
+          117.4,
+          25.4
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              117,
+              25
+            ],
+            [
+              117.8,
+              25
+            ],
+            [
+              117.8,
+              25.8
+            ],
+            [
+              117,
+              25.8
+            ],
+            [
+              117,
+              25
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "adcode": 350500,
+        "name": "泉州演示区",
+        "center": [
+          118.4,
+          25.4
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              118,
+              25
+            ],
+            [
+              118.8,
+              25
+            ],
+            [
+              118.8,
+              25.8
+            ],
+            [
+              118,
+              25.8
+            ],
+            [
+              118,
+              25
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "adcode": 350600,
+        "name": "漳州演示区",
+        "center": [
+          119.4,
+          25.4
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              119,
+              25
+            ],
+            [
+              119.8,
+              25
+            ],
+            [
+              119.8,
+              25.8
+            ],
+            [
+              119,
+              25.8
+            ],
+            [
+              119,
+              25
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "adcode": 350700,
+        "name": "南平演示区",
+        "center": [
+          117.4,
+          26.4
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              117,
+              26
+            ],
+            [
+              117.8,
+              26
+            ],
+            [
+              117.8,
+              26.8
+            ],
+            [
+              117,
+              26.8
+            ],
+            [
+              117,
+              26
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "adcode": 350800,
+        "name": "龙岩演示区",
+        "center": [
+          118.4,
+          26.4
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              118,
+              26
+            ],
+            [
+              118.8,
+              26
+            ],
+            [
+              118.8,
+              26.8
+            ],
+            [
+              118,
+              26.8
+            ],
+            [
+              118,
+              26
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "adcode": 350900,
+        "name": "宁德演示区",
+        "center": [
+          119.4,
+          26.4
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              119,
+              26
+            ],
+            [
+              119.8,
+              26
+            ],
+            [
+              119.8,
+              26.8
+            ],
+            [
+              119,
+              26.8
+            ],
+            [
+              119,
+              26
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

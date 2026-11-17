@@ -1,0 +1,15 @@
+import unreal
+ml=unreal.MaterialEditingLibrary
+m=unreal.load_asset('/Game/ArtAB/Materials/M_AB_TextureProbe') or unreal.AssetToolsHelpers.get_asset_tools().create_asset('M_AB_TextureProbe','/Game/ArtAB/Materials',unreal.Material,unreal.MaterialFactoryNew())
+n=ml.create_material_expression(m,unreal.MaterialExpressionTextureSample)
+n.texture=unreal.load_asset('/Game/ArtAB/Textures/forest_ground_04/forest_ground_04_diff_2k')
+wp=ml.create_material_expression(m,unreal.MaterialExpressionWorldPosition)
+xy=ml.create_material_expression(m,unreal.MaterialExpressionComponentMask);xy.set_editor_property('r',True);xy.set_editor_property('g',True);xy.set_editor_property('b',False)
+div=ml.create_material_expression(m,unreal.MaterialExpressionDivide);div.set_editor_property('const_b',100000)
+ml.connect_material_expressions(wp,'',xy,'');ml.connect_material_expressions(xy,'',div,'A');ml.connect_material_expressions(div,'',n,'UVs')
+ml.connect_material_property(n,'RGB',unreal.MaterialProperty.MP_BASE_COLOR);ml.recompile_material(m);unreal.EditorAssetLibrary.save_loaded_asset(m)
+ls=next(a for a in unreal.get_editor_subsystem(unreal.EditorActorSubsystem).get_all_level_actors() if isinstance(a,unreal.Landscape))
+ls.set_editor_property('landscape_material',m)
+cam=next(a for a in unreal.get_editor_subsystem(unreal.EditorActorSubsystem).get_all_level_actors() if a.get_actor_label()=='AB_Camera_Normal')
+AB_TEX_PROBE_TASK=unreal.AutomationLibrary.take_high_res_screenshot(1920,1080,'D:/3d-research/artifacts/fujian-mountain-art-ab/direct-texture-probe.png',camera=cam,delay=0)
+unreal.EditorLevelLibrary.editor_invalidate_viewports()

@@ -1,0 +1,15 @@
+import unreal,json,pathlib
+ml=unreal.MaterialEditingLibrary;ea=unreal.EditorAssetLibrary
+mi=unreal.load_asset('/Game/ArtAB/Materials/MI_AB_OriginalBridgeProbe') or unreal.AssetToolsHelpers.get_asset_tools().create_asset('MI_AB_OriginalBridgeProbe','/Game/ArtAB/Materials',unreal.MaterialInstanceConstant,unreal.MaterialInstanceConstantFactoryNew())
+ml.set_material_instance_parent(mi,unreal.load_asset('/Bridge/MSPresets/M_MS_Surface_Material/M_MS_Surface_Material'))
+ml.set_material_instance_texture_parameter_value(mi,'Albedo',unreal.load_asset('/Game/ArtAB/Textures/forest_ground_04/forest_ground_04_diff_2k'))
+ml.set_material_instance_texture_parameter_value(mi,'Normal',unreal.load_asset('/Game/ArtAB/Textures/forest_ground_04/forest_ground_04_nor_dx_2k'))
+ml.set_material_instance_texture_parameter_value(mi,'ARD',unreal.load_asset('/Game/ArtAB/Textures/forest_ground_04/forest_ground_04_arm_2k'))
+ml.set_material_instance_vector_parameter_value(mi,'Tiling/Offset',unreal.LinearColor(r=100,g=100,b=0,a=0))
+ml.update_material_instance(mi);ea.save_loaded_asset(mi)
+ls=next(a for a in unreal.get_editor_subsystem(unreal.EditorActorSubsystem).get_all_level_actors() if isinstance(a,unreal.Landscape))
+ls.set_editor_property('landscape_material',mi)
+unreal.AutomationLibrary.set_editor_viewport_view_mode(unreal.ViewModeIndex.VMI_LIT)
+c=next(a for a in unreal.get_editor_subsystem(unreal.EditorActorSubsystem).get_all_level_actors() if a.get_actor_label()=='AB_Camera_Normal')
+AB_PROBE_TASK=unreal.AutomationLibrary.take_high_res_screenshot(1920,1080,'D:/3d-research/artifacts/fujian-mountain-art-ab/original-bridge-probe.png',camera=c,delay=0)
+unreal.EditorLevelLibrary.editor_invalidate_viewports()

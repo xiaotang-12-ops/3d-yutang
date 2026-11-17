@@ -1,0 +1,13 @@
+node_modules/
+dist/
+Binaries/
+Intermediate/
+Saved/
+DerivedDataCache/
+__pycache__/
+.vs/
+*.sln
+*.user
+artifacts/
+shared/terrain/
+*.log

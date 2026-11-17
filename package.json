@@ -1,0 +1,19 @@
+{
+  "name": "fujian-3d-research",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "data": "node scripts/prepare-data.mjs",
+    "check:data": "node scripts/check-data.mjs",
+    "dev": "vite web --host 127.0.0.1 --port 5178 --strictPort",
+    "build": "vite build web",
+    "preview": "vite preview web --host 127.0.0.1 --port 5178 --strictPort"
+  },
+  "dependencies": {
+    "three": "0.180.0"
+  },
+  "devDependencies": {
+    "vite": "7.1.12"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "service": "Synthetic mathematical terrain",
+  "url": "offline",
+  "meshSha256": "4e2b1844fb4484cc098b0f52bcc9c56aecea8ff49e9ac90a2119d58b8ed65066",
+  "shape": {
+    "weight": 0.0,
+    "sigmaPixels": 0.65,
+    "radiusPixels": 2,
+    "residualClipMeters": 40.0,
+    "gateMeters": [
+      0.0,
+      80.0
+    ],
+    "interpretation": "Bounded display approximation, not survey elevation or water classification."
+  }
+}

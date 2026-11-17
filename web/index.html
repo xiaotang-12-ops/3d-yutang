@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#07141f" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%235ce3c2' d='M16 2 30 10v13L16 31 2 23V10z'/%3E%3C/svg%3E" />
+    <title>福建 · 三维地图技术样机</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="header">
+        <div class="brand-mark" aria-hidden="true">闽</div>
+        <div class="brand"><span class="eyebrow">FUJIAN / SPATIAL LAB</span><h1>福建 · 三维地图实验</h1></div>
+        <div class="header-note"><span class="live-dot"></span> 本机实时渲染 <span class="divider">/</span> <span>技术样机 01</span></div>
+        <button id="engine-info" class="engine-button">UE5 工程进度 <span>↗</span></button>
+      </header>
+      <main>
+        <section class="map-section" aria-label="三维地图区域">
+          <div class="map-heading"><div><nav aria-label="地图层级"><button id="home-crumb">福建省</button><span id="city-crumb"></span></nav><h2 id="map-title">一张地图，走进福建。</h2><p id="map-subtitle">点击城市，探索市级演示点位分布</p></div><span class="view-pill"><span></span><b id="view-label">全省视图</b></span></div>
+          <div id="map-stage"><div id="map-labels"></div><div id="map-error" role="alert" hidden></div><div id="loading">正在构建三维地图…</div></div>
+          <div class="map-tools"><button id="back" hidden>← 返回全省</button><button id="reset-view">↻ 重置视角</button><button id="top-view">⌑ 俯视</button><button id="fullscreen">⛶ 全屏</button></div>
+          <div class="compass" aria-label="北向指示">N<span>↑</span></div>
+          <div class="map-footnote"><span class="key"><i></i>演示点位</span><span>拖动旋转 · 滚轮缩放 · 点击探索</span></div>
+        </section>
+        <aside class="sidebar" aria-label="数量与点位信息">
+          <div class="section-kicker">DISTRIBUTION OVERVIEW <span id="region-code">35 / FUJIAN</span></div>
+          <h2 id="panel-title">全省分布概览</h2><div class="count-row"><strong id="total-count">—</strong><span>个演示鱼塘</span></div>
+          <div class="summary-line"><span id="summary-text">覆盖 9 个城市</span><span class="demo-tag">模拟数据</span></div>
+          <div class="list-header"><h3 id="list-title">城市分布</h3><span id="list-hint">点击下钻 ↘</span></div>
+          <div id="item-list"></div>
+          <section id="site-detail" hidden aria-live="polite"></section>
+          <div class="data-note"><span>ⓘ</span><p><b>公开开发样本</b>区域形状、鱼塘位置、数量及面积均为虚构，可用于测试选择、统计和镜头交互。</p></div>
+        </aside>
+      </main>
+      <footer><span><span class="status-dot"></span><b id="render-status">正在加载</b><span id="fps"></span></span><span>行政区挤出三维 · 非真实地形</span><span id="idle-note">无人操作 60 秒返回全省</span></footer>
+      <dialog id="engine-dialog"><button class="dialog-close" aria-label="关闭">×</button><span class="eyebrow">NATIVE / UNREAL ENGINE 5</span><h2>真正的 UE5 路线</h2><p>本机还没有安装 UE5。目前准备的是原生 C++ 工程，使用同一份地图和演示数据。</p><ul><li>原生三角网格、城市拾取、点位与镜头控制</li><li>工程文件准备后，仍需 UE5 与 C++ 工具链编译</li><li>UE5 画面、原生运行与 EXE 打包：<b>未验证</b></li></ul><p class="dialog-note">当前页面使用 Three.js / WebGL，不能证明 UE5 或麒麟设备已适配。</p><button class="primary dialog-close-button">继续体验网页样机</button></dialog>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

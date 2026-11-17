@@ -1,0 +1,2 @@
+import unreal
+unreal.get_editor_subsystem(unreal.LevelEditorSubsystem).editor_invalidate_viewports()

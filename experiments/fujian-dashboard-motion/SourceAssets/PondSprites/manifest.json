@@ -1,0 +1,48 @@
+{
+  "schema_version": 2,
+  "owner": "fujian-pond-sprites-14-20261103",
+  "purpose": "B专属无鱼透明塘形；水域坐标为按源PNG手工记录的保守内域，非真实地理边界",
+  "material": "/Game/Motion/PondSprites/M_PondSpriteWater",
+  "variants": [
+    {"index": 0, "file": "pond-hero.png", "texture": "T_PondHero", "size": [1671, 941], "presentation_vertical_scale": 1, "water_exclusions_px": [], "sha256": "d02951c9e67fbafb2cf1faec154d77161a872049369b0935ed8dad2d85592978", "water_polygons_px": [
+      [[175,552],[305,457],[545,384],[765,320],[1000,274],[1250,286],[1430,332],[1510,390],[1480,445],[1330,486],[1155,540],[1040,590],[970,651],[900,705],[760,745],[585,742],[410,696],[285,658],[215,610]],
+      [[1100,618],[1165,582],[1280,566],[1400,580],[1510,614],[1555,661],[1500,700],[1370,745],[1250,748],[1150,718],[1085,673]]
+    ]},
+    {"index": 1, "file": "pond-oval.png", "texture": "T_PondOval", "size": [1774, 887], "presentation_vertical_scale": 1, "water_exclusions_px": [], "sha256": "c9277151ccf86445cf7eee3455bbc0ff0812bc1a88a4708adface4a714bd4406", "water_polygons_px": [
+      [[245,535],[365,487],[575,446],[790,409],[1010,389],[1240,402],[1430,438],[1550,486],[1595,540],[1510,590],[1420,632],[1240,680],[1000,716],[785,719],[620,698],[510,657],[400,610],[280,575]]
+    ]},
+    {"index": 2, "file": "pond-rect.png", "texture": "T_PondRect", "size": [1774, 887], "presentation_vertical_scale": 1, "water_exclusions_px": [], "sha256": "43287ff9d4f9de8453e08649fbd6b55981f3ae186b750cb61bfbfe40448852a0", "water_polygons_px": [
+      [[276,548],[540,383],[862,391],[664,644],[420,641],[301,609]],
+      [[986,394],[1260,403],[1100,652],[774,646]],
+      [[1363,405],[1598,415],[1592,526],[1536,610],[1443,651],[1230,656]]
+    ]},
+    {"index": 3, "file": "pond-smart-bean.png", "texture": "T_PondSmartBean", "size": [1586, 992], "presentation_vertical_scale": 1, "sha256": "495041b7bedf5ac716a3271d60b41ac71ef848b751ca8f1c31ed3bbc37ab0624", "source": "用户本轮提供的原字节，无重生成或像素编辑", "water_polygons_px": [
+      [[258,514],[410,425],[660,348],[810,310],[1000,304],[1178,330],[1300,385],[1327,445],[1240,495],[1110,525],[1000,576],[914,626],[817,672],[670,695],[510,677],[375,636],[286,579]],
+      [[1043,674],[1110,616],[1235,583],[1355,602],[1418,650],[1400,704],[1320,753],[1196,772],[1102,741],[1056,708]]
+    ], "water_exclusions_px": [
+      [[918,355],[1009,355],[1009,548],[918,548]],
+      [[805,593],[909,593],[909,799],[805,799]],
+      [[854,135],[941,135],[941,283],[854,283]],
+      [[1385,310],[1478,310],[1478,487],[1385,487]]
+    ], "water_exclusion_notes": ["水中浮标、天线、近旁倒影保守区", "前侧太阳能设备及支柱遮入水域", "后侧太阳能设备", "右侧太阳能设备"]},
+    {"index": 4, "file": "pond-smart-round.png", "texture": "T_PondSmartRound", "size": [1586, 992], "presentation_vertical_scale": 1, "sha256": "115a0a46ed6fd7b7c0823ba4092147431e6a7565e922789e3108546ac8d89477", "source": "用户本轮提供的原字节，无重生成或像素编辑", "water_polygons_px": [
+      [[265,441],[326,380],[450,331],[610,300],[790,290],[1000,311],[1170,355],[1288,412],[1337,472],[1322,520],[1250,576],[1130,624],[970,660],[786,675],[607,661],[458,625],[344,574],[282,519]]
+    ], "water_exclusions_px": [
+      [[938,491],[1127,491],[1127,790],[938,790]],
+      [[286,548],[440,548],[440,772],[286,772]],
+      [[195,105],[382,105],[382,405],[195,405]],
+      [[1250,150],[1440,150],[1440,455],[1250,455]]
+    ], "water_exclusion_notes": ["前侧太阳能板、摄像头、支柱及遮入水面部分", "前侧控制柜", "左后侧设备与伸入水面的保守区", "右后侧设备与伸入水面的保守区"]},
+    {"index": 5, "file": "pond-smart-rect.png", "texture": "T_PondSmartRect", "size": [1586, 992], "presentation_vertical_scale": 1, "sha256": "3b54984a1925d2c46d0496675773b2ed49664cc518e6bdefc04a62b9351ecd8a", "source": "用户本轮提供的原字节，无重生成或像素编辑", "water_polygons_px": [
+      [[214,630],[557,331],[748,338],[499,660],[315,667],[244,654]],
+      [[857,334],[1105,346],[886,704],[612,686]],
+      [[1193,353],[1418,363],[1415,453],[1349,670],[1220,711],[1008,712]]
+    ], "water_exclusions_px": [
+      [[150,290],[303,290],[303,565],[150,565]],
+      [[900,70],[1042,70],[1042,307],[900,307]],
+      [[942,305],[1001,305],[1001,485],[942,485]]
+    ], "water_exclusion_notes": ["左侧太阳能板与支柱", "后侧太阳能设备本体", "后侧支柱在中湾水面的反射保守区"]}
+  ],
+  "runtime_contract": {"variant_count": 6, "texture_parameter": "PondTexture", "scalar_parameters": ["ShapeType", "Phase"], "alpha": "original PNG alpha once; Slate MakeBox applies vertex opacity", "motion": "Time node; inset polygon and water-colour joint mask; geometric device exclusions regardless of water colour; fwidth(UV) bounds displacement on axis-aligned Slate quad to <1.7 output pixels", "presentation": "PresentationSize equals AspectSize; all variants preserve original image aspect ratio and use uniform contain fit", "highlight_compression": "ShapeType 0/1/2 only: soft water-colour peak compression up to 20 percent in linear RGB; outside mask and ShapeType 3/4/5 unchanged; source PNG and alpha untouched", "devices": "示意图元素，不接入真实遥测，不生成设备数值", "fallback": "same PNG static texture, never legacy rock pond"},
+  "verification": "Independent evidence directory: artifacts/fujian-dashboard-motion/pond-sprites-20261103 (native captures and independent visual review). Revision 3 requires fresh verification; this manifest does not assert visual acceptance."
+}

@@ -1,0 +1,15 @@
+import unreal,pathlib,json
+ml=unreal.MaterialEditingLibrary;at=unreal.AssetToolsHelpers.get_asset_tools()
+m=unreal.load_asset('/Game/ArtAB/Materials/M_AB_RenderProbe') or at.create_asset('M_AB_RenderProbe','/Game/ArtAB/Materials',unreal.Material,unreal.MaterialFactoryNew())
+n=ml.create_material_expression(m,unreal.MaterialExpressionConstant3Vector)
+n.set_editor_property('constant',unreal.LinearColor(r=0,g=1,b=0,a=1))
+ml.connect_material_property(n,'',unreal.MaterialProperty.MP_BASE_COLOR)
+ml.connect_material_property(n,'',unreal.MaterialProperty.MP_EMISSIVE_COLOR)
+ml.recompile_material(m)
+a=next(a for a in unreal.get_editor_subsystem(unreal.EditorActorSubsystem).get_all_level_actors() if a.get_components_by_class(unreal.ProceduralMeshComponent))
+pm=a.get_components_by_class(unreal.ProceduralMeshComponent)[0]
+pathlib.Path('D:/3d-research/artifacts/fujian-mountain-art-ab/current-material.json').write_text(json.dumps({'level':unreal.get_editor_subsystem(unreal.LevelEditorSubsystem).get_current_level().get_path_name(),'before':pm.get_material(0).get_path_name()}),encoding='utf-8')
+pm.set_material(0,m)
+c=next(a for a in unreal.get_editor_subsystem(unreal.EditorActorSubsystem).get_all_level_actors() if a.get_actor_label()=='AB_Camera_Normal')
+unreal.AutomationLibrary.take_high_res_screenshot(1920,1080,'D:/3d-research/artifacts/fujian-mountain-art-ab/material-probe.png',camera=c,delay=0)
+unreal.EditorLevelLibrary.editor_invalidate_viewports()
